@@ -1,11 +1,11 @@
 ---
 type: 'tutorialstep'
 date: 2019-04-02
-title: 'Background and Setup'
+title: Background and Setup
 technologies: ['pytest']
 topics: ['testing']
 author: 'pauleveritt'
-subtitle: 'Getting setup for pytest and our tutorial, including some background on Python testing.'
+subtitle: Getting setup for pytest and our tutorial, including some background on Python testing.
 thumbnail: './thumbnail.png'
 longVideo:
   poster: './poster_long.png'

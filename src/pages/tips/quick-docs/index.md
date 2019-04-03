@@ -35,7 +35,7 @@ rendered docstring.
 PyCharm has several facilities for showing you documentation about a 
 symbol.
 
-First, `Quick Documentation` (`Ctrl-P` Win/Linux, `F1` macOS) brings 
+First, `Quick Documentation` (`Ctrl-Q` Win/Linux, `F1` macOS) brings 
 non-obtrusive inline popup showing all that information, with a hyperlink 
 where you can navigate to the definition. Press it again and the popup 
 turns into a tool window which updates for each symbol that you land on. 

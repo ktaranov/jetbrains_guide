@@ -1,7 +1,7 @@
 ---
 type: 'tutorialstep'
 date: 2019-04-02
-title: 'Code Coverage'
+title: Code Coverage
 technologies: ['pytest']
 topics: ['testing']
 author: 'pauleveritt'
@@ -12,8 +12,7 @@ longVideo:
   url: 'https://www.youtube.com/watch?v=bFheD5JBjBI'
 ---
 
-Listing Family and Coverage
----------------------------
+## Listing Family and Coverage
 
 - Using PyCharm Professional
 

@@ -1,11 +1,11 @@
 ---
 type: 'tutorialstep'
 date: 2019-04-02
-title: 'Background and Setup'
+title: Background and Setup
 technologies: ['pytest']
 topics: ['testing']
 author: 'pauleveritt'
-subtitle: 'Getting setup for pytest and our tutorial, including some background on Python testing.'
+subtitle: Getting setup for pytest and our tutorial, including some background on Python testing.
 thumbnail: './thumbnail.png'
 longVideo:
   poster: './poster_long.png'
@@ -15,8 +15,7 @@ longVideo:
 Getting started with pytest is quite easy. Let's write a test with a
 simple assert, then show the various ways to run this test.
 
-First Test
-==========
+## First Test
 
 Make a file at ``tests/test_import.py`` with the following:
 
@@ -28,8 +27,7 @@ This Python file has one function, ``test_import``. In ``pytest``, tests
 by default in filenames starting with ``test_`` and functions/methods with
 that same prefix.
 
-Running Your Test
-=================
+## Running Your Test
 
 Now that we have a test -- albeit simple -- let's see what it looks like to
 run the test. Right-click in the middle of the editor and choose
@@ -62,8 +60,7 @@ look much different now:
 
 TODO Screenshot
 
-Many Ways to Run Tests
-======================
+## Many Ways to Run Tests
 
 As you learn "visual testing", you will start to master different ways to
 run tests. These different ways will reflect your personal style (e.g.

@@ -5,7 +5,7 @@ title: Skipping Tests
 technologies: ['pytest']
 topics: ['testing']
 author: 'pauleveritt'
-subtitle: 'Getting setup for pytest and our tutorial, including some background on Python testing.'
+subtitle: Use both IDE features and pytest markers to skip certain tests.
 thumbnail: './thumbnail.png'
 longVideo:
   poster: './poster_long.png'
@@ -22,13 +22,11 @@ We'll show this in action while implementing:
 
 - A concept of the "primary guardian" of a player
 
-Bulk Guardians
-==============
+## Bulk Guardians
 
 
 
-Primary Guardian and Skipping Tests
------------------------------------
+### Primary Guardian and Skipping Tests
 
 - Property which returns the first guardian
 
@@ -50,3 +48,6 @@ Primary Guardian and Skipping Tests
 
 - Go back to where we were in test_player.py and change the assert on
   primary guardian to assert the repr
+
+TODO Show the use of PyCharm features for skipping tests
+

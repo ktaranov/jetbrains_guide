@@ -1,7 +1,7 @@
 ---
 type: 'tutorialstep'
 date: 2019-04-02
-title: 'Debugging During Testing'
+title: Debugging During Testing
 technologies: ['pytest']
 topics: ['testing', 'debugging']
 author: 'pauleveritt'
@@ -14,8 +14,7 @@ longVideo:
 
 
 
-No Guardians and Debugging
---------------------------
+## No Guardians and Debugging
 
 - Realize you didn't test the case of zero guardians
 

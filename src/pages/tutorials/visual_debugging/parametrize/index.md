@@ -13,8 +13,7 @@ longVideo:
 ---
 
 
-Parameterizing Test Combinations
---------------------------------
+## Parameterizing Test Combinations
 
 - We'd like to construct lots of kinds of families and test
   different policies

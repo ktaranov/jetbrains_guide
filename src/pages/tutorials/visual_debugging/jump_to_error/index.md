@@ -20,8 +20,7 @@ In this step we'll implement this while showing how visual testing can
 speed you up when you make a mistake. We'll also do some housekeeping on
 our code.
 
-Let's Do A ``dataclass``
-========================
+## Let's Do A `dataclass`
 
 Python 3.7 shipped with a neat feature called dataclasses, available with a
 backport package to 3.6. Let's start by simplifying our two classes with
@@ -61,8 +60,7 @@ clear, just as you type it.
 
 On to associating a ``Guardian`` with a ``Player``.
 
-Player with Guardians
-=====================
+## Player with Guardians
 
 We'll follow TDD by writing a failing test first, then doing the
 implementation. This time, though, we'll make a typo, to show a feature of
@@ -119,8 +117,7 @@ When writing code under testing, you will *constantly* make mistakes and
 generate exceptions. PyCharm's handy exception links let you jump right to
 the error.
 
-The Benefit of Type Hints When Writing Tests
-============================================
+## The Benefit of Type Hints When Writing Tests
 
 Type annotations generate a lot of pushback in the world of Python. But when
 paired with an IDE like PyCharm, they help you "fail faster."

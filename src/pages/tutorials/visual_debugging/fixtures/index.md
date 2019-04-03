@@ -1,7 +1,7 @@
 ---
 type: 'tutorialstep'
 date: 2019-04-02
-title: 'Test Fixtures'
+title: Test Fixtures
 technologies: ['pytest']
 topics: ['testing']
 author: 'pauleveritt'
@@ -12,8 +12,7 @@ longVideo:
   url: 'https://www.youtube.com/watch?v=bFheD5JBjBI'
 ---
 
-Re-usable Data with Fixtures
-----------------------------
+## Re-usable Data with Fixtures
 
 - First in the file
 

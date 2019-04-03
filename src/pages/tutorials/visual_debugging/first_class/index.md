@@ -1,7 +1,7 @@
 ---
 type: 'tutorialstep'
 date: 2019-04-02
-title: 'Testing Your First Class'
+title: Testing Your First Class
 technologies: ['pytest']
 topics: ['testing']
 author: 'pauleveritt'
@@ -13,10 +13,10 @@ longVideo:
 ---
 
 We now see a bit about writing and running a test using
-:ref:`technology-pytest`. Let's start the process of writing our application.
+[pytest](../../../technologies/pytest). Let's start the process of writing 
+our application.
 
-The Player
-==========
+## The Player
 
 Lacrosse teams have, of course, players. We're going to make a ``Player``
 class and write tests as we implement features.
@@ -33,8 +33,7 @@ class in it:
     of information during autocomplete. The information includes
     docstrings, which helps you recall things without leaving your context.
 
-The Test
-========
+## The Test
 
 These tutorials are all about getting into the "flow". Lots of times I
 resist: I'm tired, the problem I'm about to tackle is daunting, or I have a
@@ -56,8 +55,7 @@ write the import. Type ``Playe`` and hit ``Ctrl-Space-Space`` to
 autocomplete *and* add the import line at the top, in the correctly-sorted
 location, and combined with any existing import of the module.
 
-Running
-=======
+## Running
 
 Let's run everything in the file (currently one test) by right-clicking
 the tab and choosing ``Run 'pytest in test_player.py'``.

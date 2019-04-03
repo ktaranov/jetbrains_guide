@@ -19,8 +19,7 @@ a ``Guardian`` class.
 This time let's do it with a bit of test-driven development (TDD) and
 show how to get PyCharm into a good "flow" for TDD.
 
-TDD Flow
-========
+## TDD Flow
 
 First, create ``visual_pytest/guardian.py`` with an empty class:
 
@@ -73,8 +72,7 @@ Put a mistake in your ``assert``. You'll see the tests fail, automatically.
 That's a nice start to a good TDD flow. Let's write a failing test, then
 fix the implementation.
 
-The Guardian
-============
+## The Guardian
 
 Our ``Guardian`` needs a constructor that takes and stores ``first_name``
 and a ``last_name``. Add a new test to ``tests/test_guardian.py``:

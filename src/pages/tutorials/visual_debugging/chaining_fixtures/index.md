@@ -1,11 +1,11 @@
 ---
 type: 'tutorialstep'
 date: 2019-04-02
-title: 'Chaining Fixtures'
+title: Chaining Fixtures
 technologies: ['pytest']
 topics: ['testing']
 author: 'pauleveritt'
-subtitle: 'Have fixtures which depend on data from other fixtures.'
+subtitle: Have fixtures which depend on data from other fixtures.
 thumbnail: './thumbnail.png'
 longVideo:
   poster: './poster_long.png'

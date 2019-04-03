@@ -1,7 +1,7 @@
 ---
 type: 'tutorialstep'
 date: 2019-04-02
-title: 'Testing Custom Exceptions'
+title: Testing Custom Exceptions
 technologies: ['pytest']
 topics: ['testing']
 author: 'pauleveritt'
@@ -12,8 +12,7 @@ longVideo:
   url: 'https://www.youtube.com/watch?v=bFheD5JBjBI'
 ---
 
-Handling Exceptions
--------------------
+## Handling Exceptions
 
 - Can't add yourself to yourself
 
