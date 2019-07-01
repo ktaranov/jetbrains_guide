@@ -2,7 +2,7 @@
 type: tutorialstep
 date: 2019-07-01
 title: Jump to Error
-technologies: [python, pytest]
+technologies: [pytest]
 topics: [testing]
 author: pwe
 subtitle: Writing code means writing broken code. Click a link in a traceback to open a file on the line of the error.

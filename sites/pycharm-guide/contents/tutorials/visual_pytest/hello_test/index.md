@@ -2,7 +2,7 @@
 type: tutorialstep
 date: 2019-07-01
 title: Hello Test
-technologies: [python, pytest]
+technologies: [pytest]
 topics: [testing]
 author: pwe
 subtitle: Write a simple test and run it in PyCharm's visual test runner.

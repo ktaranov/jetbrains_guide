@@ -2,7 +2,7 @@
 type: tutorialstep
 date: 2019-07-01
 title: Coverage
-technologies: [python, pytest]
+technologies: [pytest]
 topics: [coverage, testing]
 author: pwe
 subtitle: Use PyCharm's visual coverage to find code that your tests don't exercise.

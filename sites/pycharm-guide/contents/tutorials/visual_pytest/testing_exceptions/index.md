@@ -2,7 +2,7 @@
 type: tutorialstep
 date: 2019-07-01
 title: Testing Custom Exceptions
-technologies: [python, pytest]
+technologies: [pytest]
 topics: [testing]
 author: pwe
 subtitle: Write tests which ensure custom exceptions are raised when they should be raised.

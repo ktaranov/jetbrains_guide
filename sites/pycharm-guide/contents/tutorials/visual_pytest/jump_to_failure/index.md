@@ -2,7 +2,7 @@
 type: tutorialstep
 date: 2019-07-01
 title: Jump To Test Failure
-technologies: [python, pytest]
+technologies: [pytest]
 topics: [testing]
 author: pwe
 subtitle: Test writing means test breaking. Quickly jump to the line where an assertion fails.

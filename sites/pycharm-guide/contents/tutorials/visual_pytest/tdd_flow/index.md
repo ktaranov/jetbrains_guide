@@ -2,7 +2,7 @@
 type: tutorialstep
 date: 2019-07-01
 title: Getting Into the TDD Flow
-technologies: [python, pytest]
+technologies: [pytest]
 topics: [testing]
 author: pwe
 subtitle: Setup your PyCharm project to help get into the flow of Test-Driven Development (TDD).

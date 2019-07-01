@@ -2,7 +2,7 @@
 type: tutorialstep
 date: 2019-07-01
 title: Parametrize
-technologies: [python, pytest]
+technologies: [pytest]
 topics: [testing]
 author: pwe
 subtitle: Let pytest's parametrize facility ease testing of combinations of scenarios.

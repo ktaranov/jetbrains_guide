@@ -2,13 +2,13 @@
 type: tutorialstep
 date: 2019-07-01
 title: Background
-technologies: [python, pytest]
+technologies: [pytest]
 topics: [testing]
 author: pwe
 subtitle: About this tutorial.
-thumbnail: ./thumbnail.png
+thumbnail: ../thumbnail.png
 longVideo:
-  poster: ./poster_long.png
+  poster: ../poster_long.png
   url: https://www.youtube.com/watch?v=bFheD5JBjBI
 ---
 

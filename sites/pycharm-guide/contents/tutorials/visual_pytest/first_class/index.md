@@ -2,7 +2,7 @@
 type: tutorialstep
 date: 2019-07-01
 title: Testing Your First Class
-technologies: [python, pytest]
+technologies: [pytest]
 topics: [testing]
 author: pwe
 subtitle: Make a file with a class and write the basics of a test.

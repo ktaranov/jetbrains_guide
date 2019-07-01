@@ -2,7 +2,7 @@
 type: tutorialstep
 date: 2019-07-01
 title: Test Fixtures
-technologies: [python, pytest]
+technologies: [pytest]
 topics: [testing]
 author: pwe
 subtitle: Make your tests more focused by moving sample data to pytest fixtures.

@@ -2,7 +2,7 @@
 type: tutorialstep
 date: 2019-07-01
 title: Chaining Fixtures
-technologies: [python, pytest]
+technologies: [pytest]
 topics: [testing]
 author: pwe
 subtitle: Have fixtures which depend on data from other fixtures.
