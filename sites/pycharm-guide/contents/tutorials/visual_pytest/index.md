@@ -2,7 +2,7 @@
 type: tutorial
 date: 2018-10-07
 title: Visual Testing with pytest
-technologies: [pytest, python]
+technologies: [pytest]
 topics: [testing]
 author: pwe
 subtitle: Test writing is productive and fun with PyCharm as a visual testing tool atop pytest.
