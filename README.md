@@ -183,3 +183,15 @@ Normal GitHub workflow:
 - Report issues in the issue tracker
 
 - Contribute via forks and PRs
+
+# TODO
+
+Things to document.
+
+- Mark as excluded: .cache, .firebase, deploy, public
+
+- Explain the need for both deploy and public
+
+- How I do my running (npm scripts, pin tab)
+
+- Make symlinks in sites/goland-guide for public directory (if building)
