@@ -1,4 +1,4 @@
-from guardian import Guardian
+from laxleague.guardian import Guardian
 
 
 def test_import():

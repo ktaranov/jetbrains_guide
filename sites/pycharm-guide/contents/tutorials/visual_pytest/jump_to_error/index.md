@@ -12,18 +12,15 @@ longVideo:
   url: https://www.youtube.com/watch?v=bFheD5JBjBI
 ---
 
-Since we have `Guardian` now, let's hook it up to allow adding a guardian
-to a player.
+Since we have `Guardian` now, let's hook it up to allow adding a `Guardian` to a `Player`.
 
-In this step we'll implement this while showing how visual testing can
-speed you up when you make a mistake. We'll also do some housekeeping on
-our code.
+In this step we'll implement this while showing how visual testing can speed you up when you make a mistake. 
+We'll also do some housekeeping on our code.
 
 # Let's Do A `dataclass`
 
-Python 3.7 shipped with a neat feature called dataclasses, available with a
-backport package to 3.6. Let's start by simplifying our two classes with
-dataclasses and showing a side benefit in test writing.
+Python 3.7 shipped with a neat feature called dataclasses, available with a backport package to 3.6. 
+Let's start by simplifying our two classes with dataclasses and showing a side benefit in test writing.
 
 First, the `Guardian` we were just working on:
 
@@ -31,44 +28,47 @@ First, the `Guardian` we were just working on:
 
 When writing this dataclass, note how PyCharm helps:
 
-- Autocomplete and import on dataclass
+- Autocomplete and import the `dataclass` decorator
 
 - Autocomplete on str
 
-The dataclass is a simpler syntax than the constructor, but no change
-to consumers of the class, such as the test. Our auto-run of the
-`tests` folder shows that `test_guardian.py` still works fine.
+Our refactoring into a dataclass went well.
+How do we know? Because our tests pass.
+In fact, we didn't have to remember to run our tests, because we setup PyCharm to autorun the tests.
+In double fact, we didn't even have to save the file.
+Yummy.
 
 Now we change our `Player` class:
 
-`embed:tutorials/visual_pytest/jump_to_error/player.py`
+`embed:tutorials/visual_pytest/jump_to_error/player01.py`
 
 We also need to add a construction test to `test_player.py`:
 
-`embed:tutorials/visual_pytest/jump_to_error/test_player.py`
+`embed:tutorials/visual_pytest/jump_to_error/test_player01.py`
 
-Now let's get some extra benefit from dataclasses and type annotations. In
-the test, try passing in `Player('Tatiana', b'Jones')`, with a byte-string
-by accident. (Perhaps it was read from some library.) The dataclass only allows
-`str` as values for `last_name` and PyCharm very visually makes this
-clear, just as you type it.
+Now let's get some extra benefit from dataclasses and type annotations. 
+In the test, try passing in `Player('Tatiana', b'Jones')`, with a byte-string by accident. 
+The dataclass only allows `str` as values for `last_name` and PyCharm very visually makes this clear, just as you type it.
+The IDE helps us "fail faster."
 
 On to associating a `Guardian` with a `Player`.
 
 # Player with Guardians
 
-We'll follow TDD by writing a failing test first, then doing the
-implementation. This time, though, we'll make a typo, to show a feature of
-using PyCharm's visual testing.
+We'll follow TDD by writing a failing test first, then doing the implementation. 
+This time, though, we'll make a typo, to show a feature of using PyCharm's visual testing.
 
 Let's start with a test in `test_player.py`:
 
 `embed:tutorials/visual_pytest/jump_to_error/test_player01.py`
 
-We first need to ensure, in the construction, that we have an empty list
-for `player.guardians`. Then, in the new test, we make both a player
-*and* a guardian, add the guardian to the player, and test the result. This
-means we import `Guardian` in this test.
+This fails:
+
+TODO Add screenshot of test failure
+
+We first need to ensure, in `test_construction`, that we have an empty list for `player.guardians`. 
+Then, in the new test `test_add_guardian`, we make both a player *and* a guardian, add the guardian to the player, and test the result. 
+This means we also import `Guardian` in this test.
 
 Our second two tests fail, obviously:
 
@@ -81,12 +81,9 @@ Let's fix this in a new `player.py`:
 `embed:tutorials/visual_pytest/jump_to_error/player02.py`
 
 
-This dataclass adds a new field `guardians`. It is a little different: as
-Python's
-`mutable default values <https://docs.python.org/3/library/dataclasses.html#mutable-default-values>`_
-docs explain, Python class attributes can't default to a list. Python
-dataclasses fix this with a dataclass `field` function which can assign
-a factory to construct the default value.
+This dataclass adds a new dataclass field named `guardians`. 
+It is a little different: as Python's `mutable default values <https://docs.python.org/3/library/dataclasses.html#mutable-default-values>`_ docs explain, Python class attributes can't default to a list. Python
+dataclasses fix this with a dataclass `field` function which can assign a factory to construct the default value.
 
 We used the type `list` in this case. We'll explain more in a moment.
 
@@ -105,14 +102,13 @@ Pretend for a moment that we made a typo. Do the following:
 
 - Remove the `xxx`
 
-When writing code under testing, you will *constantly* make mistakes and
-generate exceptions. PyCharm's handy exception links let you jump right to
-the error.
+When writing code under testing, you will *constantly* make mistakes and generate exceptions. 
+PyCharm's handy exception links let you jump right to the error.
 
 # The Benefit of Type Hints When Writing Tests
 
-Type annotations generate a lot of pushback in the world of Python. But when
-paired with an IDE like PyCharm, they help you "fail faster."
+Type annotations generate a lot of pushback in the world of Python. 
+But when paired with an IDE like PyCharm, they help you "fail faster."
 
 What does "fail faster" mean?
 
@@ -129,58 +125,43 @@ What does "fail faster" mean?
 - Or, have your IDE prompt, via autocomplete, what is valid before you
   type it
 
-Let's see it in action. Our `Player` dataclass says that `guardians` is
-a `list`, but a list of what? Currently you could assign anything you want
-to it.
+Let's see it in action. Our `Player` dataclass says that `guardians` is a `list`, but a list of what? 
+Currently you could assign anything you want to it.
 
 Instead, let's signify that it is a list of `Guardian` instances:
 
 ```python
-
 guardians: List[Guardian] = field(default_factory=list)
 ```
 
 ## Note
 
-    As you type `List`, use Ctrl-Space-Space to complete it,
-    which also generates the import. Same for `Guardian`.
+As you type `List`, use Ctrl-Space-Space to complete it, which also generates the import. Same for `Guardian`.
 
-What is `typing.List` and why can't we use `list`? It is a
-"generic", which lets it further specify the types of things it contains.
+What is `typing.List` and why can't we use `list`? 
+It is a "generic", which lets it further specify the types of things it contains.
 `list` saves an import but doesn't allow us to say "list of Guardians".
 
-Next, let's indicate that `add_guardian` can only take a
-`Guardian` instance:
+Next, let's indicate that `add_guardian` can only take a `Guardian` instance:
 
 ```python
-
 def add_guardian(self, guardian: Guardian):
     self.guardians.append(guardian)
 ```
 
-To see how this helps us "fail faster", imagine we are writing
-`test_construction` and we thought `p.guardians` was a dictionary:
+To see how this helps us "fail faster", imagine we are writing `test_construction` and we thought `p.guardians` was a dictionary:
 
 TODO screenshot of PyCharm warning on `assert [] == p.guardians.keys()`
 
-Rather than wait to run the test and decipher the diff, our IDE
-immediately warns us with the very-specific reason of the problem.
+Rather than wait to run the test and decipher the diff, our IDE immediately warns us with the very-specific reason of the problem.
 
-Or, imagine we thought `add_guardian` took a string identifier for
-looking up a guardian. Our IDE also warns us with a perfect message:
+Or, imagine we thought `add_guardian` took a string identifier for looking up a guardian. Our IDE also warns us with a perfect message:
 
 TODO Screenshot of `p.add_guardian('mary-jones')`
 
-In this latter case, the code would have stored the string. Type
-annotations, combined with the immediate feedback in the IDE, helped us
-"fail faster", as we type.
+In this latter case, the code would have stored the string. 
+Type annotations, combined with the immediate feedback in the IDE, helped us "fail faster", as we type.
 
 Here is our final version of `player.py`:
 
-`embed:tutorials/visual_pytest/jump_to_error/player02.py`
-
-TODO
-
-- Remove the type hinting stuff, move it to a different section
-
-- Make sure the numbers of the include files is right after transition to .md
+`embed:tutorials/visual_pytest/jump_to_error/player.py`

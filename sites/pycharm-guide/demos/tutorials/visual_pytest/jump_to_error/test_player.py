@@ -1,11 +1,9 @@
-import pytest
-from guardian import Guardian
-from player import Player
-from pytest import skip
+from laxleague.guardian import Guardian
+from laxleague.player import Player
 
 
 def test_import():
-    assert 'Player' == Player.__name__
+    assert Player
 
 
 def test_construction():
@@ -20,10 +18,3 @@ def test_add_guardian():
     p = Player('Tatiana', 'Jones')
     p.add_guardian(g)
     assert [g] == p.guardians
-
-
-@pytest.mark.skip
-def test_diff():
-    l1 = [dict(x=1, y=2, z=3), dict(x=1, y=2, z=3), dict(x=1, y=2, z=3)]
-    l2 = [dict(x=1, y=2, z=3), dict(x=1, y=2, z=99), dict(x=1, y=2, z=3)]
-    assert l1 == l2

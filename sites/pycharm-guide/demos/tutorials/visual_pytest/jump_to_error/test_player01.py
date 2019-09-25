@@ -1,8 +1,8 @@
-from player import Player
+from laxleague.player import Player
 
 
 def test_import():
-    assert 'Player' == Player.__name__
+    assert Player
 
 
 def test_construction():

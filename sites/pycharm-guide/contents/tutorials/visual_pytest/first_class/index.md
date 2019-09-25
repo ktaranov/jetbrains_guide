@@ -1,7 +1,7 @@
 ---
 type: tutorialstep
 date: 2019-07-01
-title: Testing Your First Class
+title: Writing and Testing Your First Class
 technologies: [pytest]
 topics: [testing]
 author: pwe
@@ -12,19 +12,19 @@ longVideo:
   url: https://www.youtube.com/watch?v=bFheD5JBjBI
 ---
 
-We now see a bit about writing and running a test using
-`pytest`. Let's start the process of writing our application.
+We've now seen a bit about writing and running a test using `pytest`. 
+Let's start the process of writing our application.
 
 # The Player
 
-Lacrosse teams have, of course, players. We're going to make a `Player`
-class and write tests as we implement features.
+Lacrosse teams have, of course, players. 
+We're going to make a `Player` class and write tests as we implement features.
+This is known as "test-driven development" (TDD).
 
-Start by making a `visual_pytest/player.py` file with an empty `Player`
-class in it:
+We previously made a placeholder file at `laxleague/player.py`.
+Open that file and change it to have a placeholder class:
 
-.. literalinclude:: player.py
-    :caption: Empty Player Class `player.py`
+`embed:tutorials/visual_pytest/first_class/player.py`
 
 ## Note
 
@@ -41,28 +41,19 @@ lot on my mind.
 As a self-hack, I write a simple test, just to see if the thing exists. It
 is of modest value: it can later help show if a refactoring changed things.
 
-Here's the new `test_import` in `test_player.py`:
+Here's the updated `test_import` test function in `test_player.py`:
 
 `embed:tutorials/visual_pytest/first_class/test_player.py`
 
-Remember that PyCharm can help you (TODO ref the tip or doc) generate the
-import of `Player`. You don't need to stop your flow, go to the top, and
-write the import. Type `Playe` and hit `Ctrl-Space-Space` to
+Remember that PyCharm can help you [generate the import of `Player` as you type](../../../tips/generate-imports-while-typing/). 
+You don't need to stop your flow, go to the top, and
+write the import. Type `Player` and hit `Ctrl-Space-Space` to
 autocomplete *and* add the import line at the top, in the correctly-sorted
-location, and combined with any existing import of the module.
+location, combined with any existing import of the module.
 
 # Running
 
 Let's run everything in the file (currently one test) by right-clicking
-the tab and choosing `Run 'pytest in test_player.py'`.
+in the editor and choosing `Run 'pytest in test_player.py'`.
 
 PyCharm opens a tool window with the visual output of the test.
-
-TODO
-
-- Either change to assert Player or get rid of the self-hack
-
-- Mention that the Ctrl-Space-Space is frustrating when it is not unique
-
-- Ctrl-Space should be enough, don't need smart completion
-

@@ -7,5 +7,3 @@ def test_import():
 
 def test_construction():
     g = Guardian('Mary', 'Jones')
-    assert 'Mary' == g.first_name
-    assert 'Jones' == g.last_name

@@ -38,3 +38,5 @@ approach to first contact with Python testing:
 - Real-world scenario during the live building of a simple Python application
 
 - Shows how PyCharm can help you get into testing and development "flow"
+
+*Note: We'll be using PyCharm Community Edition for all the tutorial sections except the part about coverage.*

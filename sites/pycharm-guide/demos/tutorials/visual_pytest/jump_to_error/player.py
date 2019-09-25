@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
 
-from guardian import Guardian
+from laxleague.guardian import Guardian
 
 
 @dataclass

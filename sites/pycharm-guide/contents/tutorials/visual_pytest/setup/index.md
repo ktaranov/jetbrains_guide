@@ -12,17 +12,65 @@ longVideo:
   url: https://www.youtube.com/watch?v=bFheD5JBjBI
 ---
 
-- We'll be using PyCharm Community Edition except for section on coverage
+PyCharm has projects and Python does as well. 
+Let's make both, with a virtual environment, and set the project up to use `pytest`.
 
-- Make a project
+# New Project
 
-- Make a requirements.txt and enter pytest in it
+We'll let the IDE guide us through the process. 
+First, we use `File -> New Project` to make a new project, in a directory:
 
-- Minimal setup.py (perhaps using PyCharm)
+TODO Screenshot of New Project dialog
 
-    - Note: could be skipped by mark source root, but other tools e.g.
-      CI would break
+Make sure `Project Interpreter` is setup to configure a new virtual environment.
+Expand the triangle if needed to set this up.
 
-- Enable pytest as the test runner
+After clicking `Create`, tell PyCharm to open the project in a new window.
 
-- Make a top-level directory called tests
+# Python Project
+
+[Python packaging](https://packaging.python.org/tutorials/packaging-projects/) is, alas, a thorny topic, and we're going to make you do it for this tutorial.
+Why?
+Most Python packages put their tests *outside* of their source directories, to avoid accidentally shipping the tests.
+The tests thus need to import the package that you code is in, and that means a Python package.
+Fortunately this is [all explained quite well](https://blog.godatadriven.com/setup-py) in the `pytest` docs.
+
+We first need a `setup.py` file at the top of our new project.
+Add the following:
+
+`embed:tutorials/visual_pytest/setup/setup.py`
+
+Now go to the terminal and type in the following:
+
+```shell script
+$ pip install -e .[tests]
+```
+
+This has two effects:
+
+- It makes this project an "editable install" by creating a directory named `laxleague.egg-info`
+
+- `pytest` is installed into the project's virtual environment
+
+# Give Me Some Source
+
+But we don't have any source code yet. 
+Let's make a directory `laxleague` as a sibling of `setup.py`, then put a file `laxleague/player.py` in there containing:
+
+`embed:tutorials/visual_pytest/setup/player.py`
+
+# Configure Testing
+
+One last step...we need to tell PyCharm to use `pytest` for its built-in Python testing support.
+This happens automatically when we first open an existing project with `pytest` in the virtual environment.
+We added `pytest` after, so we need to configure it ourselves.
+
+Go to `Settings -> Tools -> Python Integrated Tools` and 
+
+
+Finally, make a top-level directory called `tests`.
+This mimics the normal structure of Python projects with `pytest`.
+
+When done, your directory structure should look like this:
+
+TODO screenshot of project tool window

@@ -1,5 +1,5 @@
-from guardian import Guardian
-from player import Player
+from laxleague.guardian import Guardian
+from laxleague.player import Player
 
 
 def test_import():
