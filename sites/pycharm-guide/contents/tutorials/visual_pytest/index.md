@@ -16,12 +16,20 @@ tutorialItems:
   - /tutorials/visual_pytest/jump_to_error/
   - /tutorials/visual_pytest/skipping_tests/
   - /tutorials/visual_pytest/debugging_during_testing/
+  - /tutorials/visual_pytest/testing_exceptions/
   - /tutorials/visual_pytest/fixtures/
   - /tutorials/visual_pytest/chaining_fixtures/
-  - /tutorials/visual_pytest/testing_exceptions/
   - /tutorials/visual_pytest/parametrize/
   - /tutorials/visual_pytest/coverage/
 ---
+
+TODO
+
+- Find places to interlink (tips, outside Python docs)
+
+- Sprinkle in the highlight lines routine a bit more (or see if there's something to include just a snippet)
+
+- Improve the subtitles
 
 Python developers love writing code. Tests? Not so much. Whether it’s the
 concepts of testing, or the interface of testing tools, testing is a chasm
@@ -39,3 +47,4 @@ approach to first contact with Python testing:
 - Shows how PyCharm can help you get into testing and development "flow"
 
 *Note: We'll be using PyCharm Community Edition for all the tutorial sections except the part about coverage.*
+

@@ -12,26 +12,77 @@ longVideo:
   url: https://www.youtube.com/watch?v=bFheD5JBjBI
 ---
 
+Primary guardian, great! 
+But what happens if there are no guardians yet?
+In this step we tackle that problem by combining two great features: visual *testing* with visual *debugging*.
 
-# No Guardians and Debugging
+*Note: In the next tutorial step we do some coding for this situation.*
 
-- Realize you didn't test the case of zero guardians
+# Guardian-less
 
-- Write it, traceback
+Let's imagine we were working on our `test_primary_guardian` test and did something like this:
 
-- Click on left, then click on traceback to open on left
+```python
+def test_primary_guardian():
+    p = Player('Tatiana', 'Jones')
+    assert p.primary_guardian
+```
 
-- "Why doesn't that work?"
+It raises an error:
 
-- Breakpoint, debugger, step into implementation, evaluate expression,
-  realize error
+TODO screenshot
 
-- Note: can't use console
+This error message is quite helpful, but let's imagine you're confused about it.
+"What do you mean, there's no primary guardian?"
+You'd like to explore a little to see what's going wrong.
 
-- Fix, but now the type hinting is mad
+# Your `print()` Will Not Help You Here
 
-- Fix the return value type hint
+What's the number one debugger in Python?
+Alas, the humble `print` statement.
+You thus reach for the "easiest" (wrong!) tool:
 
-TODO
+```python
+def test_primary_guardian():
+    p = Player('Tatiana', 'Jones')
+    print(p.guardians)
+    assert p.primary_guardian
+```
 
-- Move the type hinting to a separate "advanced" section
+Your tests run, but...nada.
+`pytest` is capturing output.
+Besides, you've now changed your *code* as part of investigating a problem.
+Not smart.
+
+You could learn how to generate output in `pytest`, but that would be the same issue -- writing debugging statements into your code which you might accidentally check in.
+
+The debugger was meant for this. 
+Fortunately PyCharm has a great "visual" debugger, tightly integrated with "visual testing."
+Let's use that.
+
+# Breakpoint, Step, Cha-Cha-Cha
+
+Remove the `print` statement and instead, click in the gutter beside the first line in that test function.
+
+Let's now run that *one* test, but under the debugger, which will then run `pytest`.
+click the green triangle in the gutter to the left of `test_primary_guardian` and choose `Debug 'pytest for test_play...'.
+This brings up a new tool window in the bottom, running the debugger:
+
+TODO screenshot
+
+Our test execution has stopped on the line that makes a `Player`.
+Press the `Step Over` button to go to the next line.
+Our `Variables` pane now shows that `p` exists in the scope and we can take a look at it:
+
+TODO Screenshot of expanded p variable with expanded p.guardians
+
+Aha, that's the problem! 
+But let's say we still couldn't spot it. We want to poke around interactively.
+
+Highlight `p.primary_guardian` in the next line of code -- the one triggering the error -- then right click and choose `Evaluate Expression`.
+When you click the `Evaluate` button, you see the output:
+
+TODO Screenshot
+
+You can now poke around interactively in the state at that point by typing in the `Expression:` field.
+You can even overwrite the value of a variable in the scope or create new variables.

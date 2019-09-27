@@ -68,10 +68,12 @@ For the second feature, let's use the same process: write a failing test, tempor
 Our feature will work like this: whichever guardian is added first is the primary guardian.
 In `test_player.py` we add `test_primary_guardian`, with the mark already in place:
 
-`embed:tutorials/visual_pytest/skipping_tests/test_player03.py`
+`embed:tutorials/visual_pytest/skipping_tests/test_player.py`
 
 Now time for the implementation.
-We're doing this as a Python "property", so add the following:
+We're doing this as a Python "property", so add the following in `player.py`:
+
+`embed:tutorials/visual_pytest/skipping_tests/player.py`
 
 ### Tip
 
