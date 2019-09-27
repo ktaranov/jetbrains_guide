@@ -13,5 +13,11 @@ class Player:
     guardians: List[Guardian] = field(default_factory=list)
 
     def add_guardian(self, guardian: Guardian):
-
         self.guardians.append(guardian)
+
+    def add_guardians(self, guardians: List[Guardian]):
+        self.guardians.extend(guardians)
+
+    @property
+    def primary_guardian(self):
+        return self.guardians[0]
