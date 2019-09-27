@@ -20,4 +20,4 @@ class Player:
 
     @property
     def primary_guardian(self):
-        return self.guardians[0]
+        return self.guardians[0] if self.guardians else None

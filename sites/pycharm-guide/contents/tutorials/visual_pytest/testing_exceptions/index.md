@@ -12,18 +12,40 @@ longVideo:
   url: https://www.youtube.com/watch?v=bFheD5JBjBI
 ---
 
-# Handling Exceptions
+In the previous step we showed how to debug a problem.
+Let's show how to write a test that recreates the problem and ensures our Python code handles it correctly by using `pytest` exception assertions.
+We'll then refactor the code to detect that situation and return `None`, writing tests before doing the refactoring.
+ 
+# Testing Exceptions
 
-- Can't add yourself to yourself
+Let's start, as always, with a test.
+We're adding a new test `test_no_primary_guardian` in `test_player.py`:
 
-- Raise custom exception
+`embed:tutorials/visual_pytest/testing_exceptions/test_player01.py`
 
-- Write test for it
+As we type the code above, don't forget to use autocomplete to let PyCharm generate `import pytest` for you.
 
-- Change mind on a fixture name, Refactor -> Rename
+This test uses a special context manager facility in `pytest`, in which you run a block of code that you expect to raise an exception, and let `pytest` handle it.
+You test will *fail* if the exception is not raised.
+The context manager optionally lets you add `as exc` to then do some asserts after the block, about the nature of the exception value.
 
-    - Show that it doesn't pick up some random variable name that matches
+# Return `None` Instead
 
-    - Works in both directions
+Perhaps we decide that raising an exception isn't a good pattern.
+Instead, we want to detect if `self.guardians` is empty, and if so, return `None`.
 
-    - Oops, wrong, undo
+To start, let's...write a test.
+Or in this case, change that last test:
+
+```python
+def test_no_primary_guardian():
+    p = Player('Tatiana', 'Jones')
+    assert p.primary_guardian is None
+```
+
+Good news, the test fails. 
+Remember to remove the now-unused `import pytest` via PyCharm's `Optimize Imports`.
+
+We now change our implementation to correctly return `None`:
+
+`embed:tutorials/visual_pytest/testing_exceptions/player.py`
