@@ -30,8 +30,9 @@ After clicking `Create`, tell PyCharm to open the project in a new window.
 # Python Project
 
 [Python packaging](https://packaging.python.org/tutorials/packaging-projects/) is, alas, a thorny topic, and we're going to make you do it for this tutorial.
+
 Why?
-Most Python packages put their tests *outside* of their source directories, to avoid accidentally shipping the tests.
+Most Python packages put their tests *outside* of their source directories, to avoid accidentally shipping the tests (among other reasons.)
 The tests thus need to import the package that you code is in, and that means a Python package.
 Fortunately this is [all explained quite well](https://blog.godatadriven.com/setup-py) in the `pytest` docs.
 
@@ -40,7 +41,7 @@ Add the following:
 
 `embed:tutorials/visual_pytest/setup/setup.py`
 
-Now go to the terminal and type in the following:
+Now go to PyCharm's Terminal tool and type in the following:
 
 ```shell script
 $ pip install -e .[tests]
@@ -63,10 +64,11 @@ Let's make a directory `laxleague` as a sibling of `setup.py`, then put a file `
 
 One last step...we need to tell PyCharm to use `pytest` for its built-in Python testing support.
 This happens automatically when we first open an existing project with `pytest` in the virtual environment.
-We added `pytest` after, so we need to configure it ourselves.
+We added `pytest` after making the environment, so we need to configure it ourselves.
 
-Go to `Settings -> Tools -> Python Integrated Tools` and 
+Go to `Settings -> Tools -> Python Integrated Tools` and change `Default test runner:` to `pytest`:
 
+TODO screenshot
 
 Finally, make a top-level directory called `tests`.
 This mimics the normal structure of Python projects with `pytest`.

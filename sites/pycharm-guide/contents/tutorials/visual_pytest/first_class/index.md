@@ -46,14 +46,14 @@ Here's the updated `test_import` test function in `test_player.py`:
 `embed:tutorials/visual_pytest/first_class/test_player.py`
 
 Remember that PyCharm can help you [generate the import of `Player` as you type](../../../tips/generate-imports-while-typing/). 
-You don't need to stop your flow, go to the top, and
-write the import. Type `Player` and hit `Ctrl-Space-Space` to
-autocomplete *and* add the import line at the top, in the correctly-sorted
-location, combined with any existing import of the module.
+You don't need to stop your flow, go to the top, and write the import. 
+Instead, type `Pla` and hit `Ctrl-Space-Space` to autocomplete *and* add the import line at the top, in the correctly-sorted location, combined with any existing import of the module.
 
 # Running
 
-Let's run everything in the file (currently one test) by right-clicking
-in the editor and choosing `Run 'pytest in test_player.py'`.
+Let's run everything in the file (currently one test) by right-clicking in the editor and choosing `Run 'pytest in test_player.py'`.
 
 PyCharm opens a tool window with the visual output of the test.
+Our test passes again:
+
+TODO screenshot

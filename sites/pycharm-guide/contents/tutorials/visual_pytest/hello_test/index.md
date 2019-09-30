@@ -12,27 +12,27 @@ longVideo:
   url: https://www.youtube.com/watch?v=bFheD5JBjBI
 ---
 
-Getting started with pytest is quite easy. Let's write a test with a
-simple assert, then show the various ways to run this test.
+Getting started with pytest is quite easy. 
+Let's write a test with a simple assert, then show the various ways to run this test.
 
 # First Test
 
-Make a file at `tests/test_player.py` with the following:
+Make a file at `tests/test_player.py` -- meaning, not inside the nested `laxleague` directory -- with the following:
 
 `embed:tutorials/visual_pytest/hello_test/test_player01.py`
 
-This Python file has one function, `test_player`. In `pytest`, tests
-[are discovered](https://docs.pytest.org/en/latest/goodpractices.html#conventions-for-python-test-discovery)
-by default in filenames starting with `test_` and functions/methods with
-that same prefix.
+This Python file has one function, `test_player`. 
+In `pytest`, tests [are discovered](https://docs.pytest.org/en/latest/goodpractices.html#conventions-for-python-test-discovery) by default in filenames starting with `test_` and functions/methods with that same prefix.
 
 # Running Your Test
 
-Now that we have a test -- albeit simple -- let's see what it looks like to
-run the test. Right-click in the middle of the editor and choose
-`Run 'pytest in test_player.py'`.
+Now that we have a test -- albeit simple -- let's see what it looks like to run the test. 
+Right-click in the middle of the editor and choose `Run 'pytest in test_player.py'`.
 
 TODO Screenshot of the context menu for running
+
+Yay, our first tests run. 
+Sure, small victory, but small victories can help get us into the TDD flow.
 
 ## Warning
 
