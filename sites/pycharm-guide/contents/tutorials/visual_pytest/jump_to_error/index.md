@@ -15,14 +15,14 @@ longVideo:
 Since we have `Guardian` now, let's hook it up to allow adding a `Guardian` to a `Player`.
 
 In this step we'll implement this while showing how visual testing can speed you up when you make a mistake. 
-We'll also do some housekeeping on our code.
+First: some housekeeping on our code.
 
 # Let's Do A `dataclass`
 
 Python 3.7 shipped with a neat feature called dataclasses, available with a backport package to 3.6. 
 Let's start by simplifying our two classes with dataclasses and showing a side benefit in test writing.
 
-First, the `Guardian` we were just working on:
+First, the `Guardian` we were just working on in `guardian.py`:
 
 `embed:tutorials/visual_pytest/jump_to_error/guardian.py`
 
@@ -49,7 +49,10 @@ We also need to add a construction test to `test_player.py`:
 Now let's get some extra benefit from dataclasses and type annotations. 
 In the test, try passing in `Player('Tatiana', b'Jones')`, with a byte-string by accident. 
 The dataclass only allows `str` as values for `last_name` and PyCharm very visually makes this clear, just as you type it.
-The IDE helps us "fail faster."
+
+TODO Screenshot of warning for type
+
+Verdict: IDE + type annotations == "fail faster."
 
 On to associating a `Guardian` with a `Player`.
 
@@ -60,7 +63,7 @@ This time, though, we'll make a typo, to show a feature of using PyCharm's visua
 
 Let's start with a test in `test_player.py`:
 
-`embed:tutorials/visual_pytest/jump_to_error/test_player01.py`
+`embed:tutorials/visual_pytest/jump_to_error/test_player.py`
 
 This fails:
 
@@ -82,7 +85,7 @@ Let's fix this in a new `player.py`:
 
 
 This dataclass adds a new dataclass field named `guardians`. 
-It is a little different: as Python's `mutable default values <https://docs.python.org/3/library/dataclasses.html#mutable-default-values>`_ docs explain, Python class attributes can't default to a list. Python
+It is a little different: as Python's [mutable default values](https://docs.python.org/3/library/dataclasses.html#mutable-default-values) docs explain, Python class attributes can't default to a list. Python
 dataclasses fix this with a dataclass `field` function which can assign a factory to construct the default value.
 
 We used the type `list` in this case. We'll explain more in a moment.
@@ -124,11 +127,13 @@ What does "fail faster" mean?
 
 - Or, have your IDE prompt, via autocomplete, what is valid before you
   type it
+  
+- All of this, in TDD, as you are a consumer of your own code
 
 Let's see it in action. Our `Player` dataclass says that `guardians` is a `list`, but a list of what? 
 Currently you could assign anything you want to it.
 
-Instead, let's signify that it is a list of `Guardian` instances:
+Instead, in the `Player` dataclass, let's signify that it is a list of `Guardian` instances:
 
 ```python
 guardians: List[Guardian] = field(default_factory=list)
