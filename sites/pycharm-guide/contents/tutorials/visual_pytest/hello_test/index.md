@@ -58,7 +58,7 @@ Let's change the assertion to make the test fail and re-run the tests:
 In the tool window, click the green arrow to re-run your tests. The results
 look much different now:
 
-TODO Screenshot
+TODO Screenshot of failing
 
 # Many Ways to Run Tests
 

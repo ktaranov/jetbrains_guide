@@ -5,7 +5,7 @@ title: Skipping Tests
 technologies: [pytest]
 topics: [testing]
 author: pwe
-subtitle: During refactoring, ignore certain breaking tests using pytest's markers.
+subtitle: During refactoring, use pytest's markers to ignore certain breaking tests.
 thumbnail: ../thumbnail.png
 longVideo:
   poster: ../poster_long.png
@@ -82,3 +82,7 @@ Use the `property` LiveTemplate in PyCharm to speed up the generation of a prope
 
 Remove the `@pytest.mark.skip` mark from `test_primary_guardian` and the test now passes.
 
+# Conclusion
+
+The `pytest.mark.skip` facility, with related `skipIf` and `xFail`, have a broad set of uses.
+As you mature in test writing, start to include other people, and have tests that execute in different environments, you'll put them to good use.

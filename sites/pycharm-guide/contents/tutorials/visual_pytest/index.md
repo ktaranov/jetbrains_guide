@@ -19,16 +19,6 @@ tutorialItems:
   - /tutorials/visual_pytest/testing_exceptions/
 ---
 
-TODO
-
-- Find places to interlink (tips, outside Python docs)
-
-- Sprinkle in the highlight lines routine a bit more (or see if there's something to include just a snippet)
-
-- Improve the subtitles
-
-- Make sure player.py etc. end with the correct file instead of player03.py
-
 Python developers love writing code. Tests? Not so much. Whether it’s the
 concepts of testing, or the interface of testing tools, testing is a chasm
 not all developers cross.

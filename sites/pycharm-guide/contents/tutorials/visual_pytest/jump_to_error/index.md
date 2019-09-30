@@ -67,7 +67,7 @@ Let's start with a test in `test_player.py`:
 
 This fails:
 
-TODO Add screenshot of test failure
+TODO Add screenshot of test failures.
 
 We first need to ensure, in `test_construction`, that we have an empty list for `player.guardians`. 
 Then, in the new test `test_add_guardian`, we make both a player *and* a guardian, add the guardian to the player, and test the result. 
