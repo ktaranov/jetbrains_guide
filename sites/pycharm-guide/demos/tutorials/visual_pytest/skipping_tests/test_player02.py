@@ -1,4 +1,4 @@
-import pytest
+import pytest  # highlight-line
 
 from laxleague.guardian import Guardian
 from laxleague.player import Player
@@ -22,7 +22,7 @@ def test_add_guardian():
     assert [g] == p.guardians
 
 
-@pytest.mark.skip
+@pytest.mark.skip  # highlight-line
 def test_add_guardians():
     p = Player('Tatiana', 'Jones')
 

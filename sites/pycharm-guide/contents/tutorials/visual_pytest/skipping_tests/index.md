@@ -27,7 +27,7 @@ We'll show this in action while implementing:
 Players usually have more than one Guardian.
 When you have a list of guardians, you might prefer a different method that lets you add them all at once.
 
-Let's implement this in TDD fashion, by first writing a test in `test_player.py` that fails:
+Let's implement this in TDD fashion, by first writing a `test_add_guardians` test in `test_player.py` that fails:
 
 `embed:tutorials/visual_pytest/skipping_tests/test_player01.py`
 
@@ -57,7 +57,8 @@ Remember to remove the now-unused `pytest` import in `test_player.py` using `Opt
 Eager readers might have spotted a type hinting flaw: our code breaks the [Be liberal in what you accept, and conservative in what you return](https://m.oursky.com/type-hints-better-type-at-python-28de692c3a4b) rule.
 
 That is, our new method wants a `List`. 
-When really,  Let's change our `add_guardians` to accept any kind of `Iterable`:
+When really, it will take a Python "iterable".
+Let's change our `add_guardians` to accept any kind of `Iterable`:
 
 `embed:tutorials/visual_pytest/skipping_tests/player02.py`
 
@@ -68,7 +69,7 @@ For the second feature, let's use the same process: write a failing test, tempor
 Our feature will work like this: whichever guardian is added first is the primary guardian.
 In `test_player.py` we add `test_primary_guardian`, with the mark already in place:
 
-`embed:tutorials/visual_pytest/skipping_tests/test_player.py`
+`embed:tutorials/visual_pytest/skipping_tests/test_player03.py`
 
 Now time for the implementation.
 We're doing this as a Python "property", so add the following in `player.py`:
@@ -79,4 +80,5 @@ We're doing this as a Python "property", so add the following in `player.py`:
 
 Use the `property` LiveTemplate in PyCharm to speed up the generation of a property. 
 
-With this in place, we remove the `skip` and our tests pass.
+Remove the `@pytest.mark.skip` mark from `test_primary_guardian` and the test now passes.
+

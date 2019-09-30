@@ -1,3 +1,5 @@
+import pytest
+
 from laxleague.guardian import Guardian
 from laxleague.player import Player
 
@@ -35,6 +37,8 @@ def test_add_guardians():
     assert [g1, g2, g3] == p.guardians
 
 
+# highlight-start
+@pytest.mark.skip
 def test_primary_guardian():
     p = Player('Tatiana', 'Jones')
 

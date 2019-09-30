@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Iterable
 
 from laxleague.guardian import Guardian
 
@@ -15,9 +15,10 @@ class Player:
     def add_guardian(self, guardian: Guardian):
         self.guardians.append(guardian)
 
-    def add_guardians(self, guardians: List[Guardian]):
+    def add_guardians(self, guardians: Iterable[Guardian]):
         self.guardians.extend(guardians)
 
+    # highlight-range{1-3}
     @property
     def primary_guardian(self):
         return self.guardians[0]
