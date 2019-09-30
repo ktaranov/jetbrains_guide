@@ -65,7 +65,7 @@ Let's use that.
 Remove the `print` statement and instead, click in the gutter beside the first line in that test function.
 
 Let's now run that *one* test, but under the debugger, which will then run `pytest`.
-click the green triangle in the gutter to the left of `test_primary_guardian` and choose `Debug 'pytest for test_play...'.
+Click the green triangle in the gutter to the left of `test_primary_guardian` and choose `Debug 'pytest for test_play...'.
 This brings up a new tool window in the bottom, running the debugger:
 
 TODO screenshot
@@ -86,3 +86,7 @@ TODO Screenshot
 
 You can now poke around interactively in the state at that point by typing in the `Expression:` field.
 You can even overwrite the value of a variable in the scope or create new variables.
+
+You're currently poking around in the code for the test, but perhaps you want to poke around in the implementation.
+Click the `Step Into` button and the debugger will put you on the `return self.guardians[0]` line in the `primary_guardian` method.
+

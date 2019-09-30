@@ -13,7 +13,8 @@ longVideo:
 ---
 
 In the previous step we showed how to debug a problem.
-Let's show how to write a test that recreates the problem and ensures our Python code handles it correctly by using `pytest` exception assertions.
+Let's show how to write a test that recreates the problem, *and* ensures our Python code handles it correctly, by using `pytest` exception assertions.
+
 We'll then refactor the code to detect that situation and return `None`, writing tests before doing the refactoring.
  
 # Testing Exceptions
@@ -34,18 +35,17 @@ The context manager optionally lets you add `as exc` to then do some asserts aft
 Perhaps we decide that raising an exception isn't a good pattern.
 Instead, we want to detect if `self.guardians` is empty, and if so, return `None`.
 
-To start, let's...write a test.
+To start, let's...write a test.x
 Or in this case, change that last test:
 
-```python
-def test_no_primary_guardian():
-    p = Player('Tatiana', 'Jones')
-    assert p.primary_guardian is None
-```
+`embed:tutorials/visual_pytest/testing_exceptions/test_player.py`
 
 Good news, the test fails. 
 Remember to remove the now-unused `import pytest` via PyCharm's `Optimize Imports`.
 
-We now change our implementation to correctly return `None`:
+We now change our implementation in `player.py` to correctly return `None`. 
+While we're at it, let's put a return type on `primary_guardian`:
 
 `embed:tutorials/visual_pytest/testing_exceptions/player.py`
+
+Python uses `Optional` when the value might be missing.

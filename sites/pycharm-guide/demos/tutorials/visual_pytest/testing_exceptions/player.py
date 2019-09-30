@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import List
+from typing import List, Optional  # highlight-line
 
 from laxleague.guardian import Guardian
 
@@ -19,5 +19,6 @@ class Player:
         self.guardians.extend(guardians)
 
     @property
-    def primary_guardian(self):
+    # highlight-range{1-2}
+    def primary_guardian(self) -> Optional[Guardian]:
         return self.guardians[0] if self.guardians else None

@@ -1,5 +1,3 @@
-import pytest
-
 from laxleague.guardian import Guardian
 from laxleague.player import Player
 
@@ -52,9 +50,7 @@ def test_primary_guardian():
     assert g1 == p.primary_guardian
 
 
-# highlight-start
 def test_no_primary_guardian():
     p = Player('Tatiana', 'Jones')
-    with pytest.raises(IndexError) as exc:
-        p.primary_guardian
-    assert 'list index out of range' == str(exc.value)
+    # highlight-next-line
+    assert p.primary_guardian is None
