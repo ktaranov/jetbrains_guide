@@ -8,11 +8,11 @@ author: pwe
 subtitle: Write a simple test and run it in PyCharm's visual test runner.
 thumbnail: ../thumbnail.png
 longVideo:
-  poster: ../poster_long.png
-  url: https://www.youtube.com/watch?v=bFheD5JBjBI
+  poster: poster_long.png
+  url: https://www.youtube.com/watch?v=yKQXgQT6mqg
 ---
 
-Getting started with pytest is quite easy. 
+Getting started with pytest is quite easy.
 Let's write a test with a simple assert, then show the various ways to run this test.
 
 # First Test
@@ -29,7 +29,7 @@ In `pytest`, tests [are discovered](https://docs.pytest.org/en/latest/goodpracti
 Now that we have a test -- albeit simple -- let's see what it looks like to run the test. 
 Right-click in the middle of the editor and choose `Run 'pytest in test_player.py'`.
 
-TODO Screenshot of the context menu for running
+![Run Tests via Context Menu](./context_menu.png)
 
 Yay, our first tests run. 
 Sure, small victory, but small victories can help get us into the TDD flow.
@@ -45,7 +45,7 @@ environment has `pytest`.
 PyCharm opens a new run tool window in the bottom of the screen. This tool
 window is customized for visualizing tests and their results:
 
-TODO Screen shot of the tool window
+![Run Tests Tool Window](./tool_window.png)
 
 The test runner tool window lists the tests (organized by hierarchy) on the
 left and the test output on the right. It also has buttons for operations
@@ -58,7 +58,7 @@ Let's change the assertion to make the test fail and re-run the tests:
 In the tool window, click the green arrow to re-run your tests. The results
 look much different now:
 
-TODO Screenshot of failing
+![Failing Tests](./failing.png)
 
 # Many Ways to Run Tests
 
@@ -76,8 +76,7 @@ the run configuration. We'll use this for the rest of the tutorial.
 
 - *Green arrow*. Click on green arrows in toolbar, gutter, tool window.
 
-- *Right-click*. Context menu in editor, tab, tool window, project tool
-folder.
+- *Right-click*. Context menu in editor, tab, tool window, project tool folder.
 
 - *Permanent run configuration*. All of the approaches above create
 *temporary* run configurations. I also make permanent run configurations

@@ -8,8 +8,8 @@ author: pwe
 subtitle: Make a file with a class and write the basics of a test.
 thumbnail: ../thumbnail.png
 longVideo:
-  poster: ../poster_long.png
-  url: https://www.youtube.com/watch?v=bFheD5JBjBI
+  poster: poster_long.png
+  url: https://www.youtube.com/watch?v=9ePBkqx6XHM
 ---
 
 We've now seen a bit about writing and running a test using `pytest`. 
@@ -56,4 +56,4 @@ Let's run everything in the file (currently one test) by right-clicking in the e
 PyCharm opens a tool window with the visual output of the test.
 Our test passes again:
 
-TODO screenshot
+![Test Passes](./test_passes.png)

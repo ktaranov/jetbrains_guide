@@ -8,11 +8,11 @@ author: pwe
 subtitle: Make a PyCharm project and virtual environment with dependencies, then configure PyCharm to use pytest.
 thumbnail: ../thumbnail.png
 longVideo:
-  poster: ../poster_long.png
-  url: https://www.youtube.com/watch?v=bFheD5JBjBI
+  poster: poster_long.png
+  url: https://www.youtube.com/watch?v=XRaox0aH6y0
 ---
 
-PyCharm has projects and Python does as well. 
+PyCharm has projects and Python does as well. x
 Let's make both, with a virtual environment, and set the project up to use `pytest`.
 
 # New Project
@@ -68,11 +68,11 @@ We added `pytest` after making the environment, so we need to configure it ourse
 
 Go to `Settings -> Tools -> Python Integrated Tools` and change `Default test runner:` to `pytest`:
 
-TODO screenshot
+![Python Integrated Tools](./integrated_tools.png)
 
 Finally, make a top-level directory called `tests`.
 This mimics the normal structure of Python projects with `pytest`.
 
 When done, your directory structure should look like this:
 
-TODO screenshot of project tool window
+![Directory Structure](./directory_structure.png)

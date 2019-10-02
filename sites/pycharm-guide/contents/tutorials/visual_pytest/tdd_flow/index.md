@@ -8,8 +8,8 @@ author: pwe
 subtitle: Setup your PyCharm project to help get into the flow of Test-Driven Development (TDD).
 thumbnail: ../thumbnail.png
 longVideo:
-  poster: ../poster_long.png
-  url: https://www.youtube.com/watch?v=bFheD5JBjBI
+  poster: poster_long.png
+  url: https://www.youtube.com/watch?v=gerOp85XHXM
 ---
 
 Players have parents. Pro tip for youth sports: families are complicated
@@ -37,7 +37,7 @@ Run the test by right-clicking in the editor *outside any block* and choosing to
 
 Yay, the test passes. Not a major victory, but allows us to start inching forward:
 
-TODO Screenshot of tests passing
+![Test Passes](./guardian_passes_import.png)
 
 # TDD Flow
 
@@ -47,23 +47,24 @@ I like both visible, with my code on the left and the tests on the right.
 
 Invoke `Find Action` with Cmd-Shift-A and search for `Split Vertically`.
 On the left, open `guardian.py` and on the right, make sure `test_guardian.py` is still open. 
+While we're at it, collapse the project tool window.
 The run tool window is on the bottom (though on wide monitors I put it on the right):
 
-TODO Screenshot
+![TDD Layout](./tdd_layout.png)
 
 There, that has a nice feel to it. 
-
-One more thing: let's have all our tests run, automatically, as we type. 
-PyCharm makes this easy and visually convenient -- it even integrates with your desktop notification system when tests are finished running and PyCharm isn't visible.
 
 Now that our code is setup, let's get our test running to "the flow".
 Right-click on the `tests` folder and choose `Run 'pytest in tests'` to get a temporary run configuration for *all tests* in the project. 
 
-Now the big part...in the tool window for the test output, click on the `Toggle auto-test` icon, two icons below the green run arrow. 
+One more thing: let's have all our tests run, automatically, as we type. 
+PyCharm makes this easy and visually convenient -- it even integrates with your desktop notification system when tests are finished running and PyCharm isn't visible.
+
+In the tool window for the test output, click on the `Toggle auto-test` icon, two icons below the green run arrow. 
 With autorun enabled, next click the big green run arrow again.
 Now, all your tests run *automatically* two seconds (configurable) after you stop typing.
 
-TODO Annotated screenshot showing the 'toggle auto-test' button
+![Toggle Autotest](./toggle_autotest.png)
 
 One final point: you don't have to save changes to your code or tests.
 PyCharm has an auto-save virtual filesystem thingy.
@@ -83,7 +84,7 @@ and a `last_name`. Add a new test to `tests/test_guardian.py`:
 
 After two seconds, even without saving, our tests show as broken:
 
-TODO Screenshot of tool window with broken test
+![Broken Tests](./two_seconds_later_broken.png)
 
 Of course it breaks: `Guardian` has no constructor. 
 Since it is the *code* we are writing tests for, the mistake is conveniently right there in our left tab. 
@@ -131,7 +132,6 @@ The double-equals symbol in this case is really slick-looking.
 Let's write a test for last name, causing `test_guardian.py` to finish like the following:
 
 `embed:tutorials/visual_pytest/tdd_flow/test_guardian.py`
-
 
 One last point: PyCharm's tool window for testing shows passing tests by default. 
 If you don't want to see them, and focus on failing tests instead, click on the `Show Passed` icon to the right of the green play button.

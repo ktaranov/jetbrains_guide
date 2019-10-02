@@ -93,9 +93,9 @@ We used the type `list` in this case. We'll explain more in a moment.
 Our simple `add_guardian` method does the trick and now our tests pass.
 Pretend for a moment that we made a typo. Do the following:
 
-- Change the last line to `self.guardiansxxx.append(guardian)`
-
 - Open `guardians.py` in that tab
+
+- Change the last line to `self.guardiansxxx.append(guardian)`
 
 - Watch the tests fail with a traceback
 
@@ -110,7 +110,7 @@ PyCharm's handy exception links let you jump right to the error.
 
 # The Benefit of Type Hints When Writing Tests
 
-Type annotations generate a lot of pushback in the world of Python. 
+Type hints generate a lot of pushback in the world of Python. 
 But when paired with an IDE like PyCharm, they help you "fail faster."
 
 What does "fail faster" mean?
