@@ -52,7 +52,7 @@ The dataclass only allows `str` as values for `last_name` and PyCharm very visua
 
 TODO Screenshot of warning for type
 
-Verdict: IDE + type annotations == "fail faster."
+Verdict: TDD + (IDE + type hinting) == "fail faster."
 
 On to associating a `Guardian` with a `Player`.
 
