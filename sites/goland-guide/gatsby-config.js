@@ -96,6 +96,11 @@ module.exports = {
                             color: '55acee',
                             href: 'https://twitter.com/GoLandIDE',
                             icon: 'twitter'
+                        },
+                        {
+                            color: 'light',
+                            href: 'https://twitter.com/GoLandIDE',
+                            icon: 'custom-dotnetcore'
                         }
                     ]
                 }
