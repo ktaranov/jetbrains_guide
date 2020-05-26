@@ -9,7 +9,7 @@ thumbnail: ./thumbnail.png
 cardThumbnail: ./card.png
 shortVideo:
   poster: ./poster_short.png
-  url: https://www.youtube.com/watch?v=zZLDRtF2Ut8&list=PLM-t1Z4tbFfn291KlSOQE_ulCAyzXO3uA
+  url: https://www.youtube.com/watch?v=zZLDRtF2Ut8&list=PLM-t1Z4tbFfnXnghmtk6WVz10_pivOw25&index=23&t=0s
 leadin: |
     *See what's needed in a function, as you type, without disruption.*    
 

@@ -1,0 +1,45 @@
+---
+date: 2018-11-04
+title: 'Disable Tabs'
+technologies: ['go']
+topics: ['ide']
+author: dlsniper
+subtitle: 'Save space and stay keyboard-centric by turning off the tabs.'
+seealso:
+  - title: 'Managing Editor Tabs'
+    href: 'https://www.jetbrains.com/help/go/managing-editor-tabs.html'
+  - title: 'No Tabs in IntelliJ IDEA'
+    href: 'https://hadihariri.com/2014/06/24/no-tabs-in-intellij-idea/'
+thumbnail: ./thumbnail.png
+cardThumbnail: ./card.png
+shortVideo:
+  poster: ./poster_short.png
+  url: https://www.youtube.com/watch?v=kmct7D07lDg&list=PLM-t1Z4tbFfnXnghmtk6WVz10_pivOw25&index=4&t=0s
+leadin: |
+  *Want a cleaner UI with less noise to juggle in your head?*
+
+  There are better choices for moving between files than tabs.
+  Let's turn them off.
+
+  Tabs are a great way to focus on the few files for a task. But
+  they have some downsides. Try disabling your tabs as a first step
+  towards a more-focused, keyboard-centric workflow.
+---
+
+People love tabs. It's the default way in GoLand to jump around
+between the few files you are working on for a task.
+
+But tabs have downsides:
+
+- _Lots of mousing_. Sure, you can learn some keystrokes to move
+  between tabs, but they are a visual metaphor, and people
+  instinctively use the mouse.
+
+- _Clutter_. Before long you have tons of tabs open and then need
+  other machinery to help deal with tabs...which you used to
+  help deal with files.
+
+In this tip we show turning off tabs as a prelude to other tips
+related to keyboard-centric navigation. We show navigating through
+preferences to the action, as well as searching for the action
+and even setting it in the popup.
