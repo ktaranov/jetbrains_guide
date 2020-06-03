@@ -1,5 +1,5 @@
 ---
-date: 2019-04-15
+date: 2020-06-03
 title: Conditional Breakpoints
 technologies: []
 topics: [debugging]

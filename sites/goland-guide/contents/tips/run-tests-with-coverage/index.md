@@ -1,5 +1,5 @@
 ---
-date: 2019-04-17
+date: 2020-06-03
 title: Spot Coverage Gaps Using the Gutter
 technologies: []
 topics: [testing]

@@ -1,5 +1,5 @@
 ---
-date: 2019-03-11
+date: 2020-06-03
 title: 'Move Block Up/Down Using Keyboard'
 technologies: []
 topics: [editing]

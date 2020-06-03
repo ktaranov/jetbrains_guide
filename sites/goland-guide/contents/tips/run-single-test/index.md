@@ -1,5 +1,5 @@
 ---
-date: 2018-12-05
+date: 2020-06-03
 title: 'Run Single Test'
 technologies: [go]
 topics: [testing]

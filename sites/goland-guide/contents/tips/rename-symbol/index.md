@@ -1,5 +1,5 @@
 ---
-date: 2019-03-12
+date: 2020-06-03
 title: 'Rename Symbol'
 technologies: []
 topics: [editing]

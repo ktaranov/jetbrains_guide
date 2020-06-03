@@ -1,5 +1,5 @@
 ---
-date: 2019-03-10
+date: 2020-06-03
 title: Make and Extend Selection Using Keyboard
 technologies: []
 topics: [editing]

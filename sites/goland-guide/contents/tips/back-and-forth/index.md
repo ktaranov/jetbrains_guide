@@ -1,5 +1,5 @@
 ---
-date: 2018-11-09
+date: 2020-06-03
 title: 'Navigate Cursor Position Back and Forth'
 technologies: ['go']
 topics: [navigation]

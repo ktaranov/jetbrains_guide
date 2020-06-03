@@ -1,8 +1,8 @@
 ---
 label: general-tips
-date: 2020-05-26
+date: 2020-06-03
 title: General Tips & Tricks
-technologies: [go]
+technologies: ['go']
 topics: ['editing', 'navigation', 'vcs']
 author: dlsniper
 subtitle: Become an IDE power-user with these bite-sized tips and tricks.

@@ -1,5 +1,5 @@
 ---
-date: 2019-01-25
+date: 2020-06-03
 title: Find In Path With Navigation Bar
 technologies: [go]
 topics: [navigation]

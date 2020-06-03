@@ -1,5 +1,5 @@
 ---
-date: 2019-04-17
+date: 2020-06-03
 title: Undo Last Commit
 technologies: []
 topics: [vcs,]

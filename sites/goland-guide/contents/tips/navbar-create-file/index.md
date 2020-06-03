@@ -1,5 +1,5 @@
 ---
-date: 2019-01-24
+date: 2020-06-03
 title: 'Create New File With Navigation Bar'
 technologies: [go]
 topics: [navigation]

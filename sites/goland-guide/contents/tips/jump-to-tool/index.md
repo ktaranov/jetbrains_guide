@@ -1,5 +1,5 @@
 ---
-date: 2018-11-07
+date: 2020-06-03
 title: 'Use Recent Files to Open Tool Window'
 technologies: ['go']
 topics: ['navigation']

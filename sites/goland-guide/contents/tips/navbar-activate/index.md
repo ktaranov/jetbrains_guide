@@ -1,5 +1,5 @@
 ---
-date: 2019-01-20
+date: 2020-06-03
 title: Activate Navigation Bar
 technologies: [go]
 topics: [navigation]

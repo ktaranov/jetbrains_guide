@@ -1,5 +1,5 @@
 ---
-date: 2018-12-04
+date: 2020-06-03
 title: 'Install and import'
 technologies: [go]
 topics: [editing]

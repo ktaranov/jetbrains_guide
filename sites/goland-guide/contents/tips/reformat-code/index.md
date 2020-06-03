@@ -1,5 +1,5 @@
 ---
-date: 2018-12-01
+date: 2020-06-03
 title: 'Reformat Code'
 technologies: []
 topics: [editing]

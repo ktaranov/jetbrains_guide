@@ -1,5 +1,5 @@
 ---
-date: 2018-12-03
+date: 2020-06-03
 title: 'Generate Imports While Typing'
 technologies: [go]
 topics: [editing]

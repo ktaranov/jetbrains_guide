@@ -1,5 +1,5 @@
 ---
-date: 2018-11-08
+date: 2020-06-03
 title: Navigate to Symbol
 technologies: [go]
 topics: [navigation]

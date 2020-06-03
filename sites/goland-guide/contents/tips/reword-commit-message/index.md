@@ -1,5 +1,5 @@
 ---
-date: 2019-04-22
+date: 2020-06-03
 title: Reword Commit Message
 technologies: []
 topics: [vcs]

@@ -10,4 +10,4 @@ coding. GoLand's "Visual Testing" puts a friendly GUI on writing and
 running Go tests.
 
 ## See Also
-- [PyCharm Help for Testing](https://www.jetbrains.com/help/pycharm/testing.html#Testing.xml)
+- [GoLand Help for Testing](https://www.jetbrains.com/help/goland/testing.html#Testing.xml)
