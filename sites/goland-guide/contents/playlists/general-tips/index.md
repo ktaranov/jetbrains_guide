@@ -32,7 +32,6 @@ playlistItems:
     - /tips/rename-symbol/
     - /tips/quick-docs/
     - /tips/parameter-info/
-    - /tips/run-from-keyboard/
     - /tips/conditional-breakpoints/
     - /tips/evaluate-expression/
     - /tips/split-screen-without-tabs/
